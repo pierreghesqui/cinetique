@@ -1,0 +1,2 @@
+https://notebook.basthon.fr/?from=https://github.com/pierreghesqui/cinetique/blob/3766c61ac474c9fd42cdc1279ee0f22fb6f5d067/Exercice-%20Pharmacocin%C3%A9tique%20des%20Anxiolytiques.ipynb&aux=https://github.com/pierreghesqui/cinetique/blob/3766c61ac474c9fd42cdc1279ee0f22fb6f5d067/donnees_lorazepam.npz&aux=https://github.com/pierreghesqui/cinetique/blob/3766c61ac474c9fd42cdc1279ee0f22fb6f5d067/donnees_midazolam.npz
+
