@@ -1,6 +1,5 @@
 import numpy as np
 import os
-from tkinter import Tk, filedialog
 import csv
 import matplotlib.pyplot as plt
 
@@ -121,41 +120,3 @@ def Donnees_CSV_Toutes_Colonnes(path):
         print("  Colonne {} (En-tête: '{}'): {}...".format(i+1, header[i].strip(), data_array[:5]))
 
     return final_np_arrays
-
-# --- Section de test (s'exécute seulement si tu lances ce fichier directement) ---
-if __name__ == "__main__":
-    print("--- Test de la fonction Donnees_CSV_Toutes_Colonnes ---")
-    list_of_data_arrays = Donnees_CSV_Toutes_Colonnes()
-
-    if list_of_data_arrays:
-        print("\nLa fonction a retourné une liste de tableaux NumPy.")
-        print("Le premier élément ({}) correspond à la première colonne de ton CSV.".format(list_of_data_arrays[0].shape))
-        print("Le deuxième élément ({}) correspond à la deuxième colonne, etc.".format(list_of_data_arrays[1].shape))
-
-        # Exemple d'utilisation si tu as au moins 2 colonnes (temps et absorbance)
-        if len(list_of_data_arrays) >= 2:
-            temps_colonne = list_of_data_arrays[0] # La première colonne est le temps
-            absorbance_colonne = list_of_data_arrays[1] # La deuxième colonne est l'absorbance
-
-            print("\nPremières valeurs de la colonne Temps : {}".format(temps_colonne[:5]))
-            print("Premières valeurs de la colonne Absorbance : {}".format(absorbance_colonne[:5]))
-
-            # Tu peux maintenant facilement diviser une colonne par un scalaire !
-            facteur_bidon = 10.0
-            nouvelle_colonne = absorbance_colonne / facteur_bidon
-            print("\nAbsorbance divisée par {} (premières 5 valeurs) : {}".format(facteur_bidon, nouvelle_colonne[:5]))
-
-            # Pour un tracé simple (si tu as au moins 2 colonnes)
-            plt.figure(figsize=(8, 5))
-            plt.plot(temps_colonne, absorbance_colonne, 'o-', label='Absorbance vs Temps')
-            plt.xlabel("Temps")
-            plt.ylabel("Absorbance")
-            plt.title("Aperçu des Données Extraites")
-            plt.grid(True)
-            plt.legend()
-            plt.show()
-
-        else:
-            print("Moins de 2 colonnes ont été extraites, pas assez pour un exemple de tracé simple.")
-    else:
-        print("La fonction n'a retourné aucune donnée.")

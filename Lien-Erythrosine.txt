@@ -1,0 +1,1 @@
+https://notebook.basthon.fr/?from=https://raw.githubusercontent.com/pierreghesqui/cinetique/main/TP-Érythrosine.ipynb&module=https://raw.githubusercontent.com/pierreghesqui/cinetique/main/donnees_csv_extractor.py
